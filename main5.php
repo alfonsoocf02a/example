@@ -102,7 +102,7 @@ $conn->close();
         <h2 class="mr-4">Consultas SQL</h2>
         <div class="d-flex align-items-center">
             <form method="POST" class="mr-4">
-                <button type="submit" name="consulta1" class="btn btn-primary">Marcas y Vehiculos</button>
+                <button type="submit" name="consulta1" class="btn btn-primary">Marcas & Vehiculos</button>
             </form>
             <form method="POST" class="form-inline">
                 <label for="facturacionMinima" class="mr-2"><b>Cantidad Mínima Facturación:</b></label>
