@@ -116,17 +116,19 @@ function getQueryResultsConsulta2($config, $facturacionMinima)
 }
 
 
-function processQueryResult($result)
+function processQueryResult(mysqli_result $data)
 {
-    $results = [];
-    if ($result) {
-        while ($row = $result->fetch_assoc()) {
-            $results[] = $row;
-        }
-    } else {
-        echo "Error en la consulta";
+
+    if (!empty($data)) {
+        return [];
     }
-    return $results;
+
+    $result = [];
+    while ($row = $data->fetch_assoc()) {
+        $result[] = $row;
+    }
+
+    return $result;
 }
 
 
