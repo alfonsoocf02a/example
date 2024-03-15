@@ -115,6 +115,8 @@ function getQueryResultsConsulta2($config, $facturacionMinima)
     }
 }
 
+/*
+    FUNCION ALBERTO - NO VA
 
 function processQueryResult(mysqli_result $data)
 {
@@ -129,6 +131,20 @@ function processQueryResult(mysqli_result $data)
     }
 
     return $result;
+}
+*/
+
+function processQueryResult($result)
+{
+    $results = [];
+    if ($result) {
+        while ($row = $result->fetch_assoc()) {
+            $results[] = $row;
+        }
+    } else {
+        echo "Error en la consulta";
+    }
+    return $results;
 }
 
 
